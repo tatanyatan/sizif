@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Сизиф</title>
+</head>
+<body>
+    <div class="forma">
+        <form onsubmit="alert('Вы забронировали дорожку!');return false">
+            <label for="name">Введите имя:</label><br>
+            <input type="text" id="namee" name="name" required ><br>
+
+            <label for="phone">
+                Введите номер телефона:<br />
+                <small>Формат ввода: номер должен содержать 11 цифр, символы не допускаются</small> </br>
+              </label>
+              
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required /> </br>
+
+            <label for="meeting-time">Выберите дату и время:</label></br>
+
+            <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            min="2024-06-30T12:00"
+            max="2024-12-31T12:00" required /></br>
+
+            <label for="where">Выберите количество часов для бронирования:</label></br>
+
+            <select class='where'>
+                <option  disabled>Выберите количество часов</option>
+                <option value='1 час'>1 час</option>
+                <option value='3 часа'>3 часа</option>
+                <option value='5 часов'>5 часов</option>
+              </select></br>
+
+              <label for="scales">Согласие на обработку персональных данных</label></br>
+              <input type="checkbox" id="scales" name="scales" checked />
+
+
+            <input type="submit" value="Забронировать">
+              
+          </form>
+    </div>
+
+    <div class="footer">
+        <p>ООО "Сизиф"</p>
+    </div>
+</body>
+</html>
